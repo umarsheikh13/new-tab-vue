@@ -1,0 +1,35 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "browser": true
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": {
+                    "resolve": {
+                        "extensions": [".vue"]
+                    }
+                }
+            }
+        }
+    },
+    "rules": {
+        "func-names": [
+            "error",
+            "never"
+        ],
+        "import/extensions": ["error", "never"],
+        "class-methods-use-this": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "import/no-dynamic-require": "off",
+        "comma-dangle": "off",
+        "global-require": "off",
+        "eqeqeq": "off",
+        "no-new": "off",
+        "indent": ["error", 4]
+    },
+    "globals": {
+        "WunderlistSDK": true
+    }
+}

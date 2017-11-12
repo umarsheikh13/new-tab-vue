@@ -1,0 +1,18 @@
+@import 'functions';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: pxrem(14px);
+    font-family: $font-stack-default;
+    font-weight: $font-weight-regular;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}

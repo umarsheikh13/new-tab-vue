@@ -1,0 +1,26 @@
+@import '../../assets/scss/variables';
+
+.boxes {
+
+    height: 100%;
+
+    .box {
+
+        transition: 0.25s;
+        position: absolute;
+        opacity: 0;
+
+        &.is-mounted {
+            opacity: 1;
+        }
+
+        .box__wrapper {
+            position: absolute;
+            background-color: $color-white;
+            overflow: auto;
+            transform: translate3d(0, 0, 0);
+        }
+
+    }
+
+}
