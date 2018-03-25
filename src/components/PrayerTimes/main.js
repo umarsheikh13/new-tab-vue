@@ -2,6 +2,7 @@ import PrayTime from 'prayer-times';
 import moment from 'moment';
 import Storage from '../../helpers/Storage';
 import BoxInit from '../../helpers/BoxInit';
+import Config from '../../../config';
 
 export default {
 
@@ -51,7 +52,6 @@ export default {
             const self = this;
             const pt = new PrayTime();
             const date = new Date();
-            const timezone = date.getTimezoneOffset() / 60;
             let current = '';
 
             // Set options
@@ -61,7 +61,7 @@ export default {
 
             // Get times
 
-            const times = pt.getTimes(date, [this.coords.latitude, this.coords.longitude], timezone, 'auto', '24h');
+            const times = pt.getTimes(date, [this.coords.latitude, this.coords.longitude], Config.userSettings.timezone, 'auto', '24h');
 
             // Convert times to seconds since epoch
 
